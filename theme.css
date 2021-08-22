@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #667;
+}
+
+.container {
+  padding-top: 5rem;
+  width: 800px;
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
+}
+.card {
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .20);
+  position: relative;
+  /* height: 30px; */
+}
+
+#file {
+  /* display: inline-block; */
+  /* border: none; */
+}
+
+.btn {
+  color: #42b983;
+  /* position: absolute; */
+  border-radius: 99px;
+  border: 1px solid #42b983;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  outline: none;
+  background: #fff;
+  transition: all ease .22s;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.btn.primary {
+  background: #42b983;
+  color: #fff;
+  left: 120px;
+}
+.btn:active {
+  box-shadow:  inset 1px 1px 1px rgba(0, 0, 0, .3);
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.preview-image {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+  position: relative;
+  display: flex;  
+}
+.preview-image img {
+  width: 180px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.preview-remove {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  background-color:#42b983;
+  font-weight: 700;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #323232;
+  font-size: 24px;
+  transition: all ease .5s;
+}
+.preview-image:hover .preview-remove {
+  opacity: 1;
+}
+
+.preview-image .preview-info {  
+  position: absolute;
+  background-color: rgba(0, 0, 0, .45);
+  font-weight: 400;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 25px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 14px;
+  transition: all ease .5s;
+  padding: 0 5px;
+}
+
+.preview-image.removing {
+  transform: scale(0);
+  transition: transform .3s;
+}
